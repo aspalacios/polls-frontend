@@ -7,7 +7,7 @@
         <input
           type="text"
           class="form-control"
-          v-model="form.email"
+          v-model="form.username"
           id="username"
           placeholder="name@example.com"
           required
@@ -41,7 +41,7 @@ export default {
   methods: {
     login() {
       axios
-        .post("http://localhost:49220/api/login/authenticate", this.form)
+        .post("", this.form)
         .then(function(response) {
           localStorage.setItem("token", response.data);
         })
